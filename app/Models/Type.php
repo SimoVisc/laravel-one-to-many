@@ -9,4 +9,8 @@ class Type extends Model
 {
     use HasFactory;
     protected $guarded =['slug'];
+    public function ptojects()
+    {
+        return $this->hasMany(Project::class);
+    }
 }

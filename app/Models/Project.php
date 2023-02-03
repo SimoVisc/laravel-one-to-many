@@ -16,4 +16,9 @@ class Project extends Model
     {
         return $this->cover_image ? asset("storage/$this->cover_image") : "https://placeholder.com/assets/images/150x150-2-500x500.png";
     }
+    public function type()
+    {
+        return $this->belongsTo(Type::class);
+    }
+
 }
